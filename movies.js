@@ -10,8 +10,8 @@ const plot = document.getElementById("plot");
 //Variables
 let flag = false;
 let heartFlag = false;
-const srcHollowHeart = "/image/hollowHeart.png";
-const srcRedHeart = "/image/redHeart.png";
+const srcHollowHeart = "hollowHeart.png";
+const srcRedHeart = "redHeart.png";
 //Collect movie name
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -43,11 +43,11 @@ function favouriteOrNot(movieName) {
     let movieArray = JSON.parse(localStorage.getItem('myArray'));
     if (movieArray != null) {
         if (movieArray.includes(movieName)) {
-            heart.src = "/image/redHeart.png";
+            heart.src = "redHeart.png";
             heartFlag = true;
         }
         else {
-            heart.src = "/image/hollowHeart.png";
+            heart.src = "hollowHeart.png";
             heartFlag = false;
         }
     }
