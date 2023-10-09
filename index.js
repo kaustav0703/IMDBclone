@@ -101,7 +101,7 @@ async function createListElements(urls) {
     // Create an image element to display the star image
     const starImageElement = document.createElement("img");
     // starImageElement.classList.add("starImg");
-    starImageElement.src = "/image/star.png"; // Set the image URL
+    starImageElement.src = "star.png"; // Set the image URL
     starImageElement.classList.add("starImg"); // Apply CSS class to the image
 
     // Wrap the movie title text node in a <span> element to apply CSS class
@@ -125,7 +125,7 @@ async function createListElements(urls) {
     li.classList.add("listChild");
 
     if (data.Response == "False") {
-        imageElement.src = "image/imageNotFound.png";
+        imageElement.src = "imageNotFound.png";
     }
 
     // Append the wrapped movie title and the movie image to the list item
@@ -159,7 +159,7 @@ function createOneMovie(movies) {
 
     const imageElement = document.createElement("img");
     if (moviePoster == "N/A") {
-        imageElement.src = "/image/imageNotFound.png"; // Set the image URL
+        imageElement.src = "imageNotFound.png"; // Set the image URL
     }
     else {
         imageElement.src = moviePoster; // Set the image URL
