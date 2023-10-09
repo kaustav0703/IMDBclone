@@ -1,0 +1,127 @@
+/* Importing fonts from a CDN */
+@import url("https://fonts.cdnfonts.com/css/youtube-sans");
+
+/* Apply styles to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    /* Use the "YouTube Sans" font for the entire page */
+    font-family: "YouTube Sans", sans-serif;
+    /* Use the "YouTube Sans Dark" font as a fallback */
+    font-family: "YouTube Sans Dark", sans-serif;
+    box-sizing: border-box;
+}
+
+/* Set background color for the entire body */
+body {
+    background-color: black;
+}
+
+/* Styles for the main parent container */
+.parent {
+    display: flex;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+/* Styles for div elements within the parent */
+.parent>div {
+    margin: 0 4rem;
+}
+
+/* Styles for the logo section */
+.logo img {
+    width: 10rem;
+    border-radius: 2rem;
+    left: 0%;
+    cursor: pointer;
+}
+
+/* Styles for the title */
+.title {
+    position: relative;
+    left: -100%;
+    animation: slideInFromLeft 2s forwards;
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* Keyframes animation for title sliding in from the left */
+@keyframes slideInFromLeft {
+    to {
+        left: 0;
+    }
+}
+
+/* Styles for the parent list container */
+.listParent {
+    margin-top: 2rem;
+    width: 95vw;
+    height: 80vh;
+    display: flex;
+    overflow: scroll;
+    flex-wrap: wrap;
+    margin: 3rem;
+    overflow: auto;
+    /* Enable scrolling */
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+}
+
+/* Styles for child list items */
+.childList {
+    height: 70%;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+/* Styles for movie names */
+.moviesNamed {
+    color: lightblue;
+}
+
+/* Styles for movie posters */
+.moviePoster {
+    height: 75%;
+}
+
+/* Styles for movie titles */
+.movieTitle {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 100%;
+}
+
+/* Styles for movie ratings */
+.movieRating {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 80%;
+}
+
+/* Styles for movie years */
+.movieYear {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 80%;
+}
+
+@media(max-width:650px){
+    .parent{
+        display: flex;
+        flex-direction: column;
+    }
+    .list{
+        display: flex;
+        flex-direction: column;
+    }
+    .listParent{
+        display: grid;
+    }
+}

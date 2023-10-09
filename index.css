@@ -1,0 +1,154 @@
+/* Apply these styles to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+/* Styles for the parent container */
+.parent {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* Styles for the logo section */
+.logo img {
+    border-radius: 1rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+/* Styles for the search box and search icon */
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styles for the search input */
+.searchText {
+    font-size: 2rem;
+    width: 30rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-right: 1rem;
+}
+
+/* Styles for the search icon */
+.searchLogo {
+    width: 3rem;
+    cursor: pointer;
+}
+
+/* Styles for the suggestions list container */
+.parentList {
+    display: none;
+    overflow: scroll;
+    width: 50vw;
+    height: 70vh;
+    position: absolute;
+    right: 20vw;
+}
+
+/* Hide the scrollbar for the suggestions list */
+.parentList::-webkit-scrollbar {
+    display: none;
+}
+
+/* Styles for individual suggestion list items */
+.parentList>li {
+    list-style: none;
+    margin: 0.1rem 0;
+    background-color: lightcyan;
+}
+
+/* Styles for list child elements */
+.listChild {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    cursor: pointer;
+    width: 30rem;
+    overflow: scroll;
+}
+
+/* Styles for movie images */
+.movieImg {
+    width: 5rem;
+}
+
+/* Styles for movie names */
+.movieName {
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+/* Styles for star images and ratings */
+.starImg {
+    width: 2rem;
+}
+
+/* Styles for ratings section */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for heart images */
+.heartImg {
+    width: 2rem;
+}
+
+/* Styles for the "Favourites" button */
+.favourites {
+    border-radius: 2px solid yellow;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 2px solid white;
+}
+
+/* Styles for the "Favourites" button on hover */
+.favourites:hover {
+    border: 2px solid blue;
+    opacity: 0.7;
+}
+
+/* Styles for the suggestions section */
+.suggestions {
+    width: 40%;
+    margin: auto;
+}
+
+/* Media query for screens with a maximum width of 950px */
+@media (max-width: 950px) {
+    /* Adjust styles for smaller screens */
+    .parent {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .parentList {
+        right: 16rem;
+        position: absolute;
+        height: 50vh;
+        width: 50vw;
+    }
+    .logo {
+        display: none;
+    }
+    .searchText {
+        width: 30vw;
+    }
+    .listChild {
+        width: 200vw;
+    }
+}

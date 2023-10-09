@@ -1,0 +1,129 @@
+/* Apply styles to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+    color: white;
+}
+
+/* Set background color for the entire body */
+body {
+    background-color: black;
+}
+
+/* Styles for the main parent container */
+.parent {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* Styles for the logo section */
+.logo img {
+    border-radius: 1rem;
+    width: 10rem;
+    cursor: pointer;
+}
+
+/* Styles for the main content section */
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Styles for div elements within the main content section */
+.main>div{
+    margin-top:1rem;
+}
+
+/* Styles for the movie title section */
+.movieTitle {
+    font-size: 3rem;
+    position: relative;
+    left: -100%;
+    animation: slideInFromLeft 2s forwards;
+    display: flex;
+    align-items: center;
+}
+
+/* Heart icon section */
+.heart{
+    cursor: pointer;
+}
+
+/* Margin for elements within the movie title section */
+.movieTitle>div{
+    margin:0 1rem;
+}
+
+/* Keyframes animation for title sliding in from the left */
+@keyframes slideInFromLeft {
+    to {
+        left: 0;
+    }
+}
+
+/* Styles for the movie poster section */
+.poster img {
+    border-radius: 2rem;
+    height: 50vh;
+}
+
+/* Styles for the rating section */
+.rating {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for the rating title */
+.title {
+    font-size: 1.2rem;
+}
+
+/* Styles for the star logo */
+.starLogo img {
+    width: 2rem;
+}
+
+/* Styles for the director's name section */
+.directorTitle {
+    display: flex;
+}
+
+/* Styles for the actors' names section */
+.actorsTitle {
+    display: flex;
+}
+
+/* Styles for the plot section */
+.plot {
+    display: flex;
+    width: 50vw;
+}
+
+/* Styles for the "Favourites" section */
+.favourites {
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+
+/* Styles for the "Favourites" section on hover */
+.favourites:hover {
+    opacity: 0.7;
+}
+
+@media(screen-width:650px){
+    .parent{
+        display: grid;
+    }
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+}

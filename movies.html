@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Page title -->
+    <title>Add List Items</title>
+    
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="/movies.css" />
+</head>
+
+<body>
+    <!-- Main parent container -->
+    <div class="parent">
+        <!-- Logo section with click event -->
+        <div class="logo" onclick="logoClicked()">
+            <img src="/image/logo.jpg" alt="Couldn't load logo" />
+        </div>
+
+        <!-- Main content section -->
+        <div class="main">
+            <!-- Movie poster section -->
+            <div class="poster">
+                <img src="/image/oppenheimer.jpg" alt="" id="poster">
+            </div>
+            
+            <!-- Movie title and heart icon section -->
+            <div class="movieTitle">
+                <div class="movieT" id="movieTitle">
+                    Oppenheimer
+                </div>
+                <div class="heart">
+                    <img src="/image/hollowHeart.png" alt="" style="width:2rem;" id="heart">
+                </div>
+            </div>
+            
+            <!-- Movie rating section -->
+            <div class="rating">
+                <div class="title" style="color: lightblue;" id="rating">
+                    IMDb rating:&nbsp;
+                </div>
+                <div class="starLogo">
+                    <img src="/image/star.png" alt="">
+                </div>
+                <div class="movieRating" id="movieRating">
+                    9.1
+                </div>
+                <div>/</div>
+                <div class="totalRating">
+                    10
+                </div>
+            </div>
+            
+            <!-- Director's name section -->
+            <div class="directorTitle">
+                <div class="actor" style="color: lightblue;">Director:&nbsp;</div>
+                <div class="directorName" id="director">
+                    Christopher Nolan
+                </div>
+            </div>
+            
+            <!-- Actors' names section -->
+            <div class="actorsTitle">
+                <div class="actor" style="color: lightblue;">Actors:&nbsp;</div>
+                <div class="actorName" id="actor">
+                    Cillian Murphy, Emily Blunt, Matt Damon
+                </div>
+            </div>
+            
+            <!-- Movie plot section -->
+            <div class="plot">
+                <div class="plotName" style="color: lightblue;">Plot:&nbsp;</div>
+                <div id="plot">
+                    During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the
+                    top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing
+                    the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first
+                    nuclear explosion, forever changing the course of history.
+                </div>
+            </div>
+        </div>
+
+        <!-- "Favourites" section with click event -->
+        <div class="favourites" onclick="favouritesClicked()">
+            Favourites
+        </div>
+
+    </div>
+
+    <!-- Include JavaScript file -->
+    <script src="/movies.js"></script>
+</body>
+
+</html>
