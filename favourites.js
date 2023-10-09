@@ -17,7 +17,7 @@ dynamicTitle();
 if(localStorage.myArray.length==0){
     const li=document.createElement('li');
     const img=document.createElement('img');
-    img.src="/image/imageNotFound.png";
+    img.src="imageNotFound.png";
     li.appendChild(img);
     listParent.appendChild(li);
 }
@@ -50,7 +50,7 @@ async function createListElement(movieName){
     const titleNode=document.createTextNode(movieTitle);
     const posterElement=document.createElement('img');
     if(moviePoster=="N/A"){
-        posterElement.src="/image/imageNotFound.png";
+        posterElement.src="imageNotFound.png";
     }
     else{
         posterElement.src=moviePoster;
@@ -97,7 +97,7 @@ async function createListElement(movieName){
 
 //Callback functions
 function logoClicked(){
-    window.location.href="/index.html";
+    window.location.href="index.html";
 }
 
 function listClicked(movieTitle){
